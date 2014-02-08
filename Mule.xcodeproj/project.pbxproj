@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		61015A8918A588D400FE6999 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61015A8818A588D400FE6999 /* Foundation.framework */; };
+		61015A8B18A588D400FE6999 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61015A8A18A588D400FE6999 /* CoreGraphics.framework */; };
+		61015A8D18A588D400FE6999 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61015A8C18A588D400FE6999 /* UIKit.framework */; };
+		61015A9318A588D400FE6999 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61015A9118A588D400FE6999 /* InfoPlist.strings */; };
+		61015A9518A588D400FE6999 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61015A9418A588D400FE6999 /* main.m */; };
+		61015A9918A588D400FE6999 /* MuleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61015A9818A588D400FE6999 /* MuleAppDelegate.m */; };
+		61015A9B18A588D400FE6999 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61015A9A18A588D400FE6999 /* Images.xcassets */; };
+		61015AA218A588D400FE6999 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61015AA118A588D400FE6999 /* XCTest.framework */; };
+		61015AA318A588D400FE6999 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61015A8818A588D400FE6999 /* Foundation.framework */; };
+		61015AA418A588D400FE6999 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61015A8C18A588D400FE6999 /* UIKit.framework */; };
+		61015AAC18A588D400FE6999 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61015AAA18A588D400FE6999 /* InfoPlist.strings */; };
+		61015AAE18A588D400FE6999 /* MuleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61015AAD18A588D400FE6999 /* MuleTests.m */; };
+		61015ABD18A5891700FE6999 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61015ABC18A5891700FE6999 /* Storyboard.storyboard */; };
+		610C9A6618A5DFA90002E416 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 610C9A6518A5DFA90002E416 /* AVFoundation.framework */; };
+		610C9A6818A5DFE60002E416 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 610C9A6718A5DFE60002E416 /* AssetsLibrary.framework */; };
+		618A925718A59052001C2B94 /* MuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 618A925618A59052001C2B94 /* MuleViewController.m */; };
+		618A925918A59BF2001C2B94 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 618A925818A59BF2001C2B94 /* CoreBluetooth.framework */; };
+		618A925A18A5A18E001C2B94 /* BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = 61015ABA18A5890800FE6999 /* BLE.m */; };
+		618A926C18A5DA25001C2B94 /* MuleCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 618A926B18A5DA25001C2B94 /* MuleCameraViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		61015AA518A588D400FE6999 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 61015A7D18A588D400FE6999 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61015A8418A588D400FE6999;
+			remoteInfo = Mule;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		61015A8518A588D400FE6999 /* Mule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mule.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		61015A8818A588D400FE6999 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		61015A8A18A588D400FE6999 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		61015A8C18A588D400FE6999 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		61015A9018A588D400FE6999 /* Mule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mule-Info.plist"; sourceTree = "<group>"; };
+		61015A9218A588D400FE6999 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		61015A9418A588D400FE6999 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		61015A9618A588D400FE6999 /* Mule-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mule-Prefix.pch"; sourceTree = "<group>"; };
+		61015A9718A588D400FE6999 /* MuleAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MuleAppDelegate.h; sourceTree = "<group>"; };
+		61015A9818A588D400FE6999 /* MuleAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuleAppDelegate.m; sourceTree = "<group>"; };
+		61015A9A18A588D400FE6999 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		61015AA018A588D400FE6999 /* MuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		61015AA118A588D400FE6999 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		61015AA918A588D400FE6999 /* MuleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MuleTests-Info.plist"; sourceTree = "<group>"; };
+		61015AAB18A588D400FE6999 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		61015AAD18A588D400FE6999 /* MuleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuleTests.m; sourceTree = "<group>"; };
+		61015AB918A5890800FE6999 /* BLE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BLE.h; path = BLE/BLE.h; sourceTree = "<group>"; };
+		61015ABA18A5890800FE6999 /* BLE.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BLE.m; path = BLE/BLE.m; sourceTree = "<group>"; };
+		61015ABB18A5890800FE6999 /* BLEDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BLEDefines.h; path = BLE/BLEDefines.h; sourceTree = "<group>"; };
+		61015ABC18A5891700FE6999 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		610C9A6518A5DFA90002E416 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		610C9A6718A5DFE60002E416 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		618A925518A59052001C2B94 /* MuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuleViewController.h; sourceTree = "<group>"; };
+		618A925618A59052001C2B94 /* MuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuleViewController.m; sourceTree = "<group>"; };
+		618A925818A59BF2001C2B94 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		618A926A18A5DA25001C2B94 /* MuleCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuleCameraViewController.h; sourceTree = "<group>"; };
+		618A926B18A5DA25001C2B94 /* MuleCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuleCameraViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		61015A8218A588D400FE6999 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				610C9A6818A5DFE60002E416 /* AssetsLibrary.framework in Frameworks */,
+				610C9A6618A5DFA90002E416 /* AVFoundation.framework in Frameworks */,
+				618A925918A59BF2001C2B94 /* CoreBluetooth.framework in Frameworks */,
+				61015A8B18A588D400FE6999 /* CoreGraphics.framework in Frameworks */,
+				61015A8D18A588D400FE6999 /* UIKit.framework in Frameworks */,
+				61015A8918A588D400FE6999 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61015A9D18A588D400FE6999 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61015AA218A588D400FE6999 /* XCTest.framework in Frameworks */,
+				61015AA418A588D400FE6999 /* UIKit.framework in Frameworks */,
+				61015AA318A588D400FE6999 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		61015A7C18A588D400FE6999 = {
+			isa = PBXGroup;
+			children = (
+				61015ABC18A5891700FE6999 /* Storyboard.storyboard */,
+				61015A8E18A588D400FE6999 /* Mule */,
+				61015AA718A588D400FE6999 /* MuleTests */,
+				61015A8718A588D400FE6999 /* Frameworks */,
+				61015A8618A588D400FE6999 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		61015A8618A588D400FE6999 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				61015A8518A588D400FE6999 /* Mule.app */,
+				61015AA018A588D400FE6999 /* MuleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		61015A8718A588D400FE6999 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61015AB718A5890700FE6999 /* BLEFramework */,
+				610C9A6718A5DFE60002E416 /* AssetsLibrary.framework */,
+				610C9A6518A5DFA90002E416 /* AVFoundation.framework */,
+				618A925818A59BF2001C2B94 /* CoreBluetooth.framework */,
+				61015A8C18A588D400FE6999 /* UIKit.framework */,
+				61015A8818A588D400FE6999 /* Foundation.framework */,
+				61015A8A18A588D400FE6999 /* CoreGraphics.framework */,
+				61015AA118A588D400FE6999 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		61015A8E18A588D400FE6999 /* Mule */ = {
+			isa = PBXGroup;
+			children = (
+				618A926A18A5DA25001C2B94 /* MuleCameraViewController.h */,
+				618A926B18A5DA25001C2B94 /* MuleCameraViewController.m */,
+				61015A9718A588D400FE6999 /* MuleAppDelegate.h */,
+				61015A9818A588D400FE6999 /* MuleAppDelegate.m */,
+				618A925518A59052001C2B94 /* MuleViewController.h */,
+				618A925618A59052001C2B94 /* MuleViewController.m */,
+				61015A9A18A588D400FE6999 /* Images.xcassets */,
+				61015A8F18A588D400FE6999 /* Supporting Files */,
+			);
+			path = Mule;
+			sourceTree = "<group>";
+		};
+		61015A8F18A588D400FE6999 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				61015A9018A588D400FE6999 /* Mule-Info.plist */,
+				61015A9118A588D400FE6999 /* InfoPlist.strings */,
+				61015A9418A588D400FE6999 /* main.m */,
+				61015A9618A588D400FE6999 /* Mule-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		61015AA718A588D400FE6999 /* MuleTests */ = {
+			isa = PBXGroup;
+			children = (
+				61015AAD18A588D400FE6999 /* MuleTests.m */,
+				61015AA818A588D400FE6999 /* Supporting Files */,
+			);
+			path = MuleTests;
+			sourceTree = "<group>";
+		};
+		61015AA818A588D400FE6999 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				61015AA918A588D400FE6999 /* MuleTests-Info.plist */,
+				61015AAA18A588D400FE6999 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		61015AB718A5890700FE6999 /* BLEFramework */ = {
+			isa = PBXGroup;
+			children = (
+				61015AB918A5890800FE6999 /* BLE.h */,
+				61015ABA18A5890800FE6999 /* BLE.m */,
+				61015ABB18A5890800FE6999 /* BLEDefines.h */,
+			);
+			name = BLEFramework;
+			path = "../Mule_bak1/vendor/RedBearLab-BLE/BLEFramework";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		61015A8418A588D400FE6999 /* Mule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61015AB118A588D400FE6999 /* Build configuration list for PBXNativeTarget "Mule" */;
+			buildPhases = (
+				61015A8118A588D400FE6999 /* Sources */,
+				61015A8218A588D400FE6999 /* Frameworks */,
+				61015A8318A588D400FE6999 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mule;
+			productName = Mule;
+			productReference = 61015A8518A588D400FE6999 /* Mule.app */;
+			productType = "com.apple.product-type.application";
+		};
+		61015A9F18A588D400FE6999 /* MuleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61015AB418A588D400FE6999 /* Build configuration list for PBXNativeTarget "MuleTests" */;
+			buildPhases = (
+				61015A9C18A588D400FE6999 /* Sources */,
+				61015A9D18A588D400FE6999 /* Frameworks */,
+				61015A9E18A588D400FE6999 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				61015AA618A588D400FE6999 /* PBXTargetDependency */,
+			);
+			name = MuleTests;
+			productName = MuleTests;
+			productReference = 61015AA018A588D400FE6999 /* MuleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		61015A7D18A588D400FE6999 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Mule;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Vince Allen";
+				TargetAttributes = {
+					61015A9F18A588D400FE6999 = {
+						TestTargetID = 61015A8418A588D400FE6999;
+					};
+				};
+			};
+			buildConfigurationList = 61015A8018A588D400FE6999 /* Build configuration list for PBXProject "Mule" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 61015A7C18A588D400FE6999;
+			productRefGroup = 61015A8618A588D400FE6999 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				61015A8418A588D400FE6999 /* Mule */,
+				61015A9F18A588D400FE6999 /* MuleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		61015A8318A588D400FE6999 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61015A9318A588D400FE6999 /* InfoPlist.strings in Resources */,
+				61015A9B18A588D400FE6999 /* Images.xcassets in Resources */,
+				61015ABD18A5891700FE6999 /* Storyboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61015A9E18A588D400FE6999 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61015AAC18A588D400FE6999 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		61015A8118A588D400FE6999 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61015A9518A588D400FE6999 /* main.m in Sources */,
+				61015A9918A588D400FE6999 /* MuleAppDelegate.m in Sources */,
+				618A925718A59052001C2B94 /* MuleViewController.m in Sources */,
+				618A925A18A5A18E001C2B94 /* BLE.m in Sources */,
+				618A926C18A5DA25001C2B94 /* MuleCameraViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61015A9C18A588D400FE6999 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61015AAE18A588D400FE6999 /* MuleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		61015AA618A588D400FE6999 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61015A8418A588D400FE6999 /* Mule */;
+			targetProxy = 61015AA518A588D400FE6999 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		61015A9118A588D400FE6999 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61015A9218A588D400FE6999 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		61015AAA18A588D400FE6999 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61015AAB18A588D400FE6999 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		61015AAF18A588D400FE6999 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		61015AB018A588D400FE6999 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		61015AB218A588D400FE6999 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mule/Mule-Prefix.pch";
+				INFOPLIST_FILE = "Mule/Mule-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		61015AB318A588D400FE6999 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mule/Mule-Prefix.pch";
+				INFOPLIST_FILE = "Mule/Mule-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		61015AB518A588D400FE6999 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Mule.app/Mule";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mule/Mule-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MuleTests/MuleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		61015AB618A588D400FE6999 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Mule.app/Mule";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mule/Mule-Prefix.pch";
+				INFOPLIST_FILE = "MuleTests/MuleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		61015A8018A588D400FE6999 /* Build configuration list for PBXProject "Mule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61015AAF18A588D400FE6999 /* Debug */,
+				61015AB018A588D400FE6999 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61015AB118A588D400FE6999 /* Build configuration list for PBXNativeTarget "Mule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61015AB218A588D400FE6999 /* Debug */,
+				61015AB318A588D400FE6999 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61015AB418A588D400FE6999 /* Build configuration list for PBXNativeTarget "MuleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61015AB518A588D400FE6999 /* Debug */,
+				61015AB618A588D400FE6999 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 61015A7D18A588D400FE6999 /* Project object */;
+}

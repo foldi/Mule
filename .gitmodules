@@ -1,0 +1,3 @@
+[submodule "vendor/RedBearLab-BLE"]
+	path = vendor/RedBearLab-BLE
+	url = git@github.com:RedBearLab/iOS.git

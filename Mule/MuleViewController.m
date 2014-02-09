@@ -7,6 +7,7 @@
 //
 
 #import "MuleViewController.h"
+#import "MuleCameraViewController.h"
 
 @interface MuleViewController ()
 @end
@@ -62,9 +63,9 @@ NSTimer *rssiTimer;
     [indConnecting stopAnimating];
     
     // send reset
-    UInt8 buf[] = {0x04, 0x00, 0x00};
-    NSData *data = [[NSData alloc] initWithBytes:buf length:3];
-    [ble write:data];
+    //UInt8 buf[] = {0x04, 0x00, 0x00};
+    //NSData *data = [[NSData alloc] initWithBytes:buf length:3];
+    //[ble write:data];
     
     // Schedule to read RSSI every 1 sec.
     rssiTimer = [NSTimer scheduledTimerWithTimeInterval:(float)1.0 target:self selector:@selector(readRSSITimer:) userInfo:nil repeats:YES];
@@ -100,6 +101,7 @@ NSTimer *rssiTimer;
     if (ble.peripherals)
         ble.peripherals = nil;
     
+    [btnConnect setTitle:@"Connecting" forState:UIControlStateNormal];
     [btnConnect setEnabled:false];
     [ble findBLEPeripherals:3];
     
@@ -121,10 +123,24 @@ NSTimer *rssiTimer;
     }
     else
     {
-        NSLog(@"Hi");
         [self performSegueWithIdentifier:@"showCam" sender:self];
         [btnConnect setTitle:@"Connect" forState:UIControlStateNormal];
         [indConnecting stopAnimating];
+    }
+}
+
+// This will get called too before the view appears
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"showCam"]) {
+        
+        NSLog(@"preparing seque!");
+        
+        // Get destination view
+        MuleCameraViewController *vc = [segue destinationViewController];
+        
+        // Pass the information to your destination view
+        [vc setBle:ble];
     }
 }
 

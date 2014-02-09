@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import "BLE.h"
 
 @interface MuleCameraViewController : UIViewController {
     BOOL started;
@@ -17,10 +18,14 @@
 	AVAssetWriterInput *assetWriterInput;
 	AVCaptureStillImageOutput *stillImageOutput;
 	NSURL *outputURL;
+    BLE *ble;
+    int frameCount;
 }
 
 @property (nonatomic, retain) IBOutlet UIView *previewView;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *startFinishButton;
+@property (nonatomic, retain) IBOutlet UILabel *totalFrames;
+@property (strong, nonatomic) BLE *ble;
 
 - (IBAction)startStop:(id)sender;
 

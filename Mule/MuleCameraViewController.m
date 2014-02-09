@@ -15,15 +15,17 @@
 @end
 
 static float kFrameInterval = 1.0;
+UInt8 bufOn[1] = {'A'};
+UInt8 bufOff[1] = {'B'};
 
 @implementation MuleCameraViewController
 
-@synthesize previewView, startFinishButton;
+@synthesize previewView, startFinishButton, totalFrames, ble;
 
 - (BOOL)setupAVCapture
 {
 	NSError *error = nil;
-    // 5 fps - taking 5 pictures will equal 1 second of video
+    // 30 fps - taking 30 pictures will equal 1 second of video
 	frameDuration = CMTimeMakeWithSeconds(1./30., 90000);
 	
 	AVCaptureSession *session = [AVCaptureSession new];
@@ -121,6 +123,8 @@ static CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self setupAVCapture];
+    frameCount = 0;
+    [totalFrames setText:[NSString stringWithFormat:@"frames: %d",frameCount]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -131,6 +135,9 @@ static CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
 
 - (void)captureFrame
 {
+ 
+    NSData *data = [[NSData alloc] initWithBytes:bufOn length:1];
+    [ble write:data];
     
     // initiate a still image capture, return immediately
     // the completionHandler is called when a sample buffer has been captured
@@ -176,9 +183,11 @@ static CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
       }];
     
     
-    
-    
     if (started) {
+        NSData *data = [[NSData alloc] initWithBytes:bufOff length:1];
+        [ble write:data];
+        frameCount++;
+        [totalFrames setText:[NSString stringWithFormat:@"frames: %d",frameCount]];
         [self performSelector:@selector(captureFrame) withObject:nil afterDelay:kFrameInterval];
     }
 }
@@ -189,25 +198,29 @@ static CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
 	ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
 	//NSLog(@"writing \"%@\" to photos album", outputURL);
 	[library writeVideoAtPathToSavedPhotosAlbum:outputURL
-								completionBlock:^(NSURL *assetURL, NSError *error) {
-									if (error) {
-										NSLog(@"assets library failed (%@)", error);
-									}
-									else {
-										[[NSFileManager defaultManager] removeItemAtURL:outputURL error:&error];
-										if (error)
-											NSLog(@"Couldn't remove temporary movie file \"%@\"", outputURL);
-									}
-									outputURL = nil;
-								}];
+        completionBlock:^(NSURL *assetURL, NSError *error) {
+            if (error) {
+                NSLog(@"assets library failed (%@)", error);
+            }
+            else {
+                [[NSFileManager defaultManager] removeItemAtURL:outputURL error:&error];
+                if (error)
+                    NSLog(@"Couldn't remove temporary movie file \"%@\"", outputURL);
+            }
+            outputURL = nil;
+        }];
 }
 
 - (IBAction)startStop:(id)sender
 {
 	if (started) {
+        NSData *data = [[NSData alloc] initWithBytes:bufOff length:1];
+        [ble write:data];
 		if (assetWriter) {
 			[assetWriterInput markAsFinished];
-			[assetWriter finishWriting];
+            [assetWriter finishWritingWithCompletionHandler:^(){
+                NSLog (@"finished writing");
+            }];
 			assetWriterInput = nil;
 			assetWriter = nil;
 			[self saveMovieToCameraRoll];
@@ -220,5 +233,6 @@ static CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
 	}
 	started = !started;
 }
+
 
 @end

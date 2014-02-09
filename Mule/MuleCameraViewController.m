@@ -224,6 +224,7 @@ static CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
 			assetWriterInput = nil;
 			assetWriter = nil;
 			[self saveMovieToCameraRoll];
+            [self performSegueWithIdentifier:@"camFinished" sender:self];
 		}
 		[sender setTitle:@"Start"];
 	}

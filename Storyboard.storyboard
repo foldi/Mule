@@ -16,31 +16,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjV-cX-LP6">
-                                <rect key="frame" x="107" y="269" width="119" height="30"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="ylS-q7-IEc">
+                                <rect key="frame" x="150" y="340" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3H-QR-E76">
+                                <rect key="frame" x="112" y="269" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Connect">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnScanForPeripherals:" destination="Cko-ZC-hPU" eventType="touchUpInside" id="r8p-Xb-1hz"/>
+                                    <action selector="btnScanForPeripherals:" destination="Cko-ZC-hPU" eventType="touchUpInside" id="rwf-L3-x7M"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="ylS-q7-IEc">
-                                <rect key="frame" x="156" y="329" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="GjV-cX-LP6" secondAttribute="trailing" constant="94" id="G8S-2S-fPL"/>
-                            <constraint firstItem="GjV-cX-LP6" firstAttribute="leading" secondItem="4Wp-J6-MU1" secondAttribute="leading" constant="107" id="NBf-YV-5mk"/>
-                            <constraint firstItem="GjV-cX-LP6" firstAttribute="top" secondItem="i92-Cx-f1O" secondAttribute="bottom" constant="249" id="VbD-yS-AiD"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnConnect" destination="GjV-cX-LP6" id="fwp-Kw-EVK"/>
+                        <outlet property="btnConnect" destination="n3H-QR-E76" id="Pwa-qo-Frb"/>
                         <outlet property="indConnecting" destination="ylS-q7-IEc" id="pMO-lC-vP5"/>
                         <segue destination="sbq-Cd-LDc" kind="modal" identifier="showCam" id="emz-hx-cti"/>
                     </connections>

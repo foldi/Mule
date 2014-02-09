@@ -118,7 +118,6 @@ NSTimer *rssiTimer;
     if (ble.peripherals.count > 0)
     {
         [ble connectPeripheral:[ble.peripherals objectAtIndex:0]];
-        //Show the list for user selection
         [self performSegueWithIdentifier:@"showCam" sender:self];
     }
     else

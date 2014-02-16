@@ -122,7 +122,7 @@ NSTimer *rssiTimer;
     }
     else
     {
-        [self performSegueWithIdentifier:@"showCam" sender:self];
+        //[self performSegueWithIdentifier:@"showCam" sender:self];
         [btnConnect setTitle:@"Connect" forState:UIControlStateNormal];
         [indConnecting stopAnimating];
     }
